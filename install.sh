@@ -74,6 +74,12 @@ for arg in "$@"; do
     esac
 done
 
+# Check if the --codex or -x flag was set, and if so, run pip install
+if [ "$zsh_codex_flag" = true ]; then
+    echo "Installing openai package..."
+    pip install openai --break-system-packages
+fi
+
 
 
 #############################################################################################
