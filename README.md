@@ -36,6 +36,16 @@ The following Zsh plugins are configured:
 - fzf-tab
 - zsh-codex
 
+## zsh-codex
+
+To install `zsh-codex`, follow these steps:
+
+1. Generate an API key from groq.com.
+2. Run the installation script:
+   ```sh
+   ./install --codex
+3. Enter the generated API key when prompted.
+
 ### Custom Zsh Configuration
 Place your personal Zsh configuration files under:
 

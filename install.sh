@@ -75,7 +75,6 @@ for arg in "$@"; do
 done
 
 
-
 #############################################################################################
 ####################################### Utilities ###########################################
 #############################################################################################
@@ -262,6 +261,14 @@ install_marker() {
 
 }
 
+install_codex() {
+    # Check if the --codex or -x flag was set, and if so, run pip install
+    if [ "$zsh_codex_flag" = true ]; then
+        echo "Installing openai package..."
+        pip install openai --break-system-packages
+    fi
+}
+
 install_todo() {
     if [ ! -L $HOME/.config/czsh/todo/bin/todo.sh ]; then
         logInfo "Installing todo.sh in $HOME/.config/czsh/todo\n"
@@ -392,6 +399,8 @@ install_fzf_tab
 install_marker
 
 install_todo
+
+install_codex
 
 copy_history
 
